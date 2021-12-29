@@ -3,7 +3,8 @@
 // library function
 import express from "express";
 import configure from "./controllers";
-import connectWithDB  from "./mongo";
+import { handleErrors } from './middlewares/handleErrors';
+import connectWithDB from "./mongo";
 
 const app = express()
 const port = 3000
@@ -13,6 +14,9 @@ const log = (msg) => console.log(msg);
 
 connectWithDB()
 configure(app)
+
+// register middlewares
+app.use(handleErrors)
 
 
 app.listen(port, () => console.log(`listening to ${port}`))
