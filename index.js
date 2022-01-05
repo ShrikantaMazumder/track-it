@@ -12,7 +12,22 @@ app.use(express.json())
 
 const log = (msg) => console.log(msg);
 
+// process request middleware
+const processRequest = (req, res, next) => {
+    let correlationId = req.headers['x-correlation-id'];
+
+    if (!correlationId) {
+        correlationId = Date.now().toString()
+        req.headers['x-correlation-id'] = correlationId
+    }
+
+    res.set('x-correlation-id', correlationId)
+    return next();
+}
+app.use(processRequest)
+
 connectWithDB()
+
 configure(app)
 
 // register middlewares
