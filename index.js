@@ -2,9 +2,12 @@
 
 // library function
 import express from "express";
+import expressWinston from "express-winston";
+import winston from "winston";
 import configure from "./controllers";
 import { handleErrors } from './middlewares/handleErrors';
 import connectWithDB from "./mongo";
+
 
 const app = express()
 const port = 3000
@@ -27,6 +30,28 @@ const processRequest = (req, res, next) => {
 app.use(processRequest)
 
 connectWithDB()
+
+const getMessage = (req, res) => {
+    let obj = {
+        correlationId: req.headers['x-correlation-id'],
+        requestBody: req.body
+    }
+    return JSON.stringify(obj)
+}
+
+const infoLogger = expressWinston.logger({
+    transports: [
+      new winston.transports.Console()
+    ],
+    format: winston.format.combine(
+      winston.format.colorize(),
+      winston.format.json()
+    ),
+    meta: true,
+    msg: getMessage,
+  })
+
+app.use(infoLogger);
 
 configure(app)
 
