@@ -1,0 +1,151 @@
+{
+    "level": "\u001b[31merror\u001b[39m",
+    "message": "middlewareError",
+    "meta": {
+        "date": "Fri Jan 07 2022 02:10:22 GMT+0600 (Bangladesh Standard Time)",
+        "error": {
+            "code": 11000,
+            "index": 0,
+            "keyPattern": {
+                "username": 1
+            },
+            "keyValue": {
+                "username": "pirate4"
+            }
+        },
+        "exception": true,
+        "level": "error",
+        "message": "uncaughtException: E11000 duplicate key error collection: trackit.users index: username_1 dup key: { username: \"pirate4\" }\nMongoServerError: E11000 duplicate key error collection: trackit.users index: username_1 dup key: { username: \"pirate4\" }\n    at /Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/operations/insert.js:51:33\n    at /Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection_pool.js:272:25\n    at handleOperationResult (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/sdam/server.js:370:9)\n    at MessageStream.messageHandler (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection.js:479:9)\n    at MessageStream.emit (node:events:390:28)\n    at MessageStream.emit (node:domain:475:12)\n    at processIncomingData (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js:108:16)\n    at MessageStream._write (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js:28:9)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)",
+        "os": {
+            "loadavg": [
+                1.85107421875,
+                1.67138671875,
+                1.64794921875
+            ],
+            "uptime": 38103
+        },
+        "process": {
+            "argv": [
+                "/usr/local/bin/node",
+                "/Users/shrikantamazumder/Development/projects/track-it-server/index.js"
+            ],
+            "cwd": "/Users/shrikantamazumder/Development/projects/track-it-server",
+            "execPath": "/usr/local/bin/node",
+            "gid": 20,
+            "memoryUsage": {
+                "arrayBuffers": 22218788,
+                "external": 33704872,
+                "heapTotal": 72138752,
+                "heapUsed": 39695464,
+                "rss": 93093888
+            },
+            "pid": 4698,
+            "uid": 501,
+            "version": "v16.13.0"
+        },
+        "req": {
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, deflate, br",
+                "cache-control": "no-cache",
+                "connection": "keep-alive",
+                "content-length": 29,
+                "content-type": "application/json",
+                "cookie": "XSRF-TOKEN=323d9fbbe7ea0865a334e73fd6bf3d02syCPCOFZjTP7IgJ8l6ObqiYbYVKCJfJcqXGymEpekLUEGMsTS9NxZUfqg0yjT9XKb%2Bi%2B6rfHwxSXRkxfQvE%2BKPPfsS00bd7LGD%2F8zjfcEGJVb4vQqC35xEwn8WVg1UIz",
+                "host": "localhost:3000",
+                "postman-token": "a488fbf4-d511-43c2-8696-b1215dfa05ab",
+                "user-agent": "PostmanRuntime/7.28.4",
+                "x-correlation-id": 1641499822483
+            },
+            "httpVersion": 1.1,
+            "method": "POST",
+            "originalUrl": "/users",
+            "query": {},
+            "url": "/users"
+        },
+        "stack": "MongoServerError: E11000 duplicate key error collection: trackit.users index: username_1 dup key: { username: \"pirate4\" }\n    at /Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/operations/insert.js:51:33\n    at /Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection_pool.js:272:25\n    at handleOperationResult (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/sdam/server.js:370:9)\n    at MessageStream.messageHandler (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection.js:479:9)\n    at MessageStream.emit (node:events:390:28)\n    at MessageStream.emit (node:domain:475:12)\n    at processIncomingData (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js:108:16)\n    at MessageStream._write (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js:28:9)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)",
+        "trace": [
+            {
+                "column": 33,
+                "file": "/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/operations/insert.js",
+                "function": null,
+                "line": 51,
+                "method": null,
+                "native": false
+            },
+            {
+                "column": 25,
+                "file": "/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection_pool.js",
+                "function": null,
+                "line": 272,
+                "method": null,
+                "native": false
+            },
+            {
+                "column": 9,
+                "file": "/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/sdam/server.js",
+                "function": "handleOperationResult",
+                "line": 370,
+                "method": null,
+                "native": false
+            },
+            {
+                "column": 9,
+                "file": "/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection.js",
+                "function": "MessageStream.messageHandler",
+                "line": 479,
+                "method": "messageHandler",
+                "native": false
+            },
+            {
+                "column": 28,
+                "file": "node:events",
+                "function": "MessageStream.emit",
+                "line": 390,
+                "method": "emit",
+                "native": false
+            },
+            {
+                "column": 12,
+                "file": "node:domain",
+                "function": "MessageStream.emit",
+                "line": 475,
+                "method": "emit",
+                "native": false
+            },
+            {
+                "column": 16,
+                "file": "/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js",
+                "function": "processIncomingData",
+                "line": 108,
+                "method": null,
+                "native": false
+            },
+            {
+                "column": 9,
+                "file": "/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js",
+                "function": "MessageStream._write",
+                "line": 28,
+                "method": "_write",
+                "native": false
+            },
+            {
+                "column": 12,
+                "file": "node:internal/streams/writable",
+                "function": "writeOrBuffer",
+                "line": 389,
+                "method": null,
+                "native": false
+            },
+            {
+                "column": 10,
+                "file": "node:internal/streams/writable",
+                "function": "_write",
+                "line": 330,
+                "method": null,
+                "native": false
+            }
+        ]
+    }
+}
+{"level":"\u001b[31merror\u001b[39m","message":"middlewareError","meta":{"date":"Fri Jan 07 2022 02:18:12 GMT+0600 (Bangladesh Standard Time)","error":{"code":11000,"index":0,"keyPattern":{"username":1},"keyValue":{"username":"pirate4"}},"exception":true,"level":"error","message":"uncaughtException: E11000 duplicate key error collection: trackit.users index: username_1 dup key: { username: \"pirate4\" }\nMongoServerError: E11000 duplicate key error collection: trackit.users index: username_1 dup key: { username: \"pirate4\" }\n    at /Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/operations/insert.js:51:33\n    at /Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection_pool.js:272:25\n    at handleOperationResult (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/sdam/server.js:370:9)\n    at MessageStream.messageHandler (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection.js:479:9)\n    at MessageStream.emit (node:events:390:28)\n    at MessageStream.emit (node:domain:475:12)\n    at processIncomingData (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js:108:16)\n    at MessageStream._write (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js:28:9)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)","os":{"loadavg":[2.48583984375,1.8955078125,1.73046875],"uptime":38573},"process":{"argv":["/usr/local/bin/node","/Users/shrikantamazumder/Development/projects/track-it-server/index.js"],"cwd":"/Users/shrikantamazumder/Development/projects/track-it-server","execPath":"/usr/local/bin/node","gid":20,"memoryUsage":{"arrayBuffers":22219575,"external":23895826,"heapTotal":37273600,"heapUsed":33312800,"rss":73662464},"pid":4988,"uid":501,"version":"v16.13.0"},"req":{"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","cache-control":"no-cache","connection":"keep-alive","content-length":"29","content-type":"application/json","cookie":"XSRF-TOKEN=323d9fbbe7ea0865a334e73fd6bf3d02syCPCOFZjTP7IgJ8l6ObqiYbYVKCJfJcqXGymEpekLUEGMsTS9NxZUfqg0yjT9XKb%2Bi%2B6rfHwxSXRkxfQvE%2BKPPfsS00bd7LGD%2F8zjfcEGJVb4vQqC35xEwn8WVg1UIz","host":"localhost:3000","postman-token":"02657d5a-035a-4b94-b60f-b8c520cc756a","user-agent":"PostmanRuntime/7.28.4","x-correlation-id":"1641500292751"},"httpVersion":"1.1","method":"POST","originalUrl":"/users","query":{},"url":"/users"},"stack":"MongoServerError: E11000 duplicate key error collection: trackit.users index: username_1 dup key: { username: \"pirate4\" }\n    at /Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/operations/insert.js:51:33\n    at /Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection_pool.js:272:25\n    at handleOperationResult (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/sdam/server.js:370:9)\n    at MessageStream.messageHandler (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection.js:479:9)\n    at MessageStream.emit (node:events:390:28)\n    at MessageStream.emit (node:domain:475:12)\n    at processIncomingData (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js:108:16)\n    at MessageStream._write (/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js:28:9)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)","trace":[{"column":33,"file":"/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/operations/insert.js","function":null,"line":51,"method":null,"native":false},{"column":25,"file":"/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection_pool.js","function":null,"line":272,"method":null,"native":false},{"column":9,"file":"/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/sdam/server.js","function":"handleOperationResult","line":370,"method":null,"native":false},{"column":9,"file":"/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/connection.js","function":"MessageStream.messageHandler","line":479,"method":"messageHandler","native":false},{"column":28,"file":"node:events","function":"MessageStream.emit","line":390,"method":"emit","native":false},{"column":12,"file":"node:domain","function":"MessageStream.emit","line":475,"method":"emit","native":false},{"column":16,"file":"/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js","function":"processIncomingData","line":108,"method":null,"native":false},{"column":9,"file":"/Users/shrikantamazumder/Development/projects/track-it-server/node_modules/mongodb/lib/cmap/message_stream.js","function":"MessageStream._write","line":28,"method":"_write","native":false},{"column":12,"file":"node:internal/streams/writable","function":"writeOrBuffer","line":389,"method":null,"native":false},{"column":10,"file":"node:internal/streams/writable","function":"_write","line":330,"method":null,"native":false}]}}
