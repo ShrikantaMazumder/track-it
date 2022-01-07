@@ -1,6 +1,6 @@
 # TRACK-IT-SERVER
 
-#### LOGGING ERRORS AND REQUESTS
+### LOGGING ERRORS AND REQUESTS
 
 For future troubleshoot errors and others requests are keeping. In this project I am keeping the logs on following way:
 
