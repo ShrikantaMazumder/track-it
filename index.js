@@ -44,13 +44,13 @@ const getMessage = (req, res) => {
 };
 
 // ALL REQUEST LOG ON FILE
-const fileInfoLogger = new winston.transports.DailyRotateFile({
-  filename: "log-info-%DATE%.log",
-  datePattern: "YYYY-MM-DD-HH",
-  zippedArchive: true,
-  maxSize: "20m",
-  maxFiles: "14d",
-});
+// const fileInfoLogger = new winston.transports.DailyRotateFile({
+//   filename: "log-info-%DATE%.log",
+//   datePattern: "YYYY-MM-DD-HH",
+//   zippedArchive: true,
+//   maxSize: "20m",
+//   maxFiles: "14d",
+// });
 
 // Elastic Search jobs
 const esTransportOpts = {
@@ -75,13 +75,13 @@ const infoLogger = expressWinston.logger({
 });
 
 // ALL ERROR LOG ON FILE
-const fileErrorLogger = new winston.transports.DailyRotateFile({
-  filename: "log-error-%DATE%.log",
-  datePattern: "YYYY-MM-DD-HH",
-  zippedArchive: true,
-  maxSize: "20m",
-  maxFiles: "14d",
-});
+// const fileErrorLogger = new winston.transports.DailyRotateFile({
+//   filename: "log-error-%DATE%.log",
+//   datePattern: "YYYY-MM-DD-HH",
+//   zippedArchive: true,
+//   maxSize: "20m",
+//   maxFiles: "14d",
+// });
 
 // log error on mongo
 const mongoErrorLogger = new winston.transports.MongoDB({
@@ -93,7 +93,7 @@ const mongoErrorLogger = new winston.transports.MongoDB({
 const errorLogger = expressWinston.errorLogger({
   transports: [
     new winston.transports.Console(),
-    fileErrorLogger,
+    // fileErrorLogger,
     mongoErrorLogger,
     esTransport,
   ],
