@@ -7,8 +7,9 @@ import configure from "./controllers";
 import { errorLogger, infoLogger } from './logger';
 import { handleErrors, processRequest } from './middlewares/index';
 import { connectWithDB } from "./mongo";
-
 dotenv.config()
+
+
 const app = express();
 app.use(express.json());
 
