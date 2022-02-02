@@ -1,14 +1,14 @@
 "use strict";
 
 import express from "express";
+import { handleValidations as handleValidation } from '../middlewares';
+import validators from '../models/view-models/index';
 import {
   deleteUser,
   getAllUsers,
   saveUser,
   updateUser
 } from "../services/userService";
-import validators from '../models/view-models/index';
-import { handleValidations as handleValidation} from '../middlewares/handleValidations';
 
 const router = express.Router();
 
