@@ -6,21 +6,16 @@ import express from "express";
 import configure from "./controllers";
 import { errorLogger, infoLogger } from './logger';
 import { handleErrors, processRequest } from './middlewares/index';
-import { connectWithDB } from "./mongo";
 dotenv.config()
 
 
 const app = express();
 app.use(express.json());
 
-const log = (msg) => console.log(msg);
-
 // process request middleware
 if(process.env.NODE_ENV !== "TEST") {
   app.use(processRequest);
 }
-
-connectWithDB();
 
 if(process.env.NODE_ENV !== "TEST") {
   app.use(infoLogger);

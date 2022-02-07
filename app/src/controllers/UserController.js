@@ -6,6 +6,7 @@ import validators from '../models/view-models/index';
 import {
   deleteUser,
   getAllUsers,
+  getUserById,
   saveUser,
   updateUser
 } from "../services/userService";
@@ -15,7 +16,17 @@ const router = express.Router();
 const getHandler = async (req, res, next) => {
   try {
     const users = await getAllUsers();
-    res.status(201).send(users);
+    res.status(200).send(users);
+  } catch (error) {
+    return next(error, req, res);
+  }
+};
+
+const getByIdHandler = async (req, res, next) => {
+  try {
+    const id = req.params.id
+    const user = await getUserById(id);
+    res.status(200).send(user);
   } catch (error) {
     return next(error, req, res);
   }
@@ -51,6 +62,7 @@ const deleteHandler = async (req, res, next) => {
 };
 
 router.get("/", getHandler);
+router.get("/:id", getByIdHandler);
 router.post("/",handleValidation(validators.userSchemaValidator) , postHandler);
 router.put("/update", putHandler);
 router.delete("/delete/:id", deleteHandler);
